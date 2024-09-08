@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Dynamic Resume Builder</h1>
+    </header>
+    <main>
+      <section>
+        <!-- Personal Information -->
+        <form id="resume-form">
+          <!-- Personal Info Section -->
+          <section class="personal-info">
+            <h2>Personal Information</h2>
+            <label for="fullName">Full Name:</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="Your Full Name"
+              required
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="myresume@gmail.com"
+              required
+            />
+
+            <label for="contact">Phone:</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Enter your contact number"
+              required
+            />
+
+            <label for="portfolio">Portfolio URL:</label>
+            <input
+              type="url"
+              id="portfolio"
+              name="portfolio"
+              placeholder="https://yourportfolio.com"
+            />
+
+            <label for="linkedin">LinkedIn URL:</label>
+            <input
+              type="url"
+              id="linkedin"
+              name="linkedin"
+              placeholder="https://linkedin.com/in/yourprofile"
+            />
+
+            <label for="profile-pic">Photo:</label>
+            <input
+              type="file"
+              id="photo"
+              accept="image/*"
+              onchange="loadPhoto(event)"
+            />
+          </section>
+
+          <!-- Education Section -->
+          <section class="education">
+            <h2>Education</h2>
+            <label for="degree">Course/Degree:</label>
+            <input
+              type="text"
+              id="degree"
+              name="degree"
+              placeholder="e.g., B.Sc. in Computer Science"
+              required
+            />
+
+            <label for="institute">Institute:</label>
+            <input
+              type="text"
+              id="institute"
+              name="institute"
+              placeholder="Institute Name"
+              required
+            />
+
+            <label for="year">Year:</label>
+            <input
+              type="text"
+              id="year"
+              name="year"
+              placeholder="e.g., 2020 - 2024"
+              required
+            />
+          </section>
+
+          <!-- Skills Section -->
+          <section class="skills">
+            <h2>Skills</h2>
+            <div id="skills-container">
+              <div class="skill-item">
+                <label for="skill1">Skill 1</label>
+                <input
+                  type="text"
+                  id="skill1"
+                  name="skill1"
+                  placeholder="Enter Skill 1"
+                  required
+                />
+              </div>
+            </div>
+            <button type="button" id="addSkillButton">Add Skill</button>
+          </section>
+
+          <!-- Experience Section -->
+          <section class="experience">
+            <h2>Experience</h2>
+            <label for="companyName">Company Name</label>
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              placeholder="e.g., ABC Corp"
+              required
+            />
+
+            <label for="jobTitle">Job Title</label>
+            <input
+              type="text"
+              id="jobTitle"
+              name="jobTitle"
+              placeholder="e.g., Software Developer"
+              required
+            />
+
+            <label for="startDate">Start Date</label>
+            <input
+              type="date"
+              id="startDate"
+              name="startDate"
+              required
+            />
+
+            <label for="endDate">End Date</label>
+            <input
+              type="date"
+              id="endDate"
+              name="endDate"
+            />
+
+            <label for="details">Details</label>
+            <textarea
+              id="details"
+              name="details"
+              placeholder="Briefly describe your role and accomplishments"
+              required
+            ></textarea>
+
+          </section>
+
+          <!-- Generate Button -->
+          <button type="button" id="generateResume">Generate Resume</button>
+        </form>
+      </section>
+
+      <!-- Resume Output -->
+      <section id="resumeOutput" class="hidden">
+        <h1>Generated Resume</h1>
+        <header>
+          <img id="resumePhoto" src="" alt="Profile Picture" />
+          <div class="header-text">
+            <h2 id="resumeFullName"></h2>
+            <p id="resumeEmail"></p>
+            <p id="resumeContact"></p>
+            <a
+              id="portfolioLink"
+              class="portfolio_link"
+              href="#"
+              target="_blank"
+              >My Portfolio</a
+            >
+            <a
+              id="linkedinLink"
+              class="linkedin_link"
+              href="#"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </div>
+        </header>
+
+        <!-- Education Display -->
+        <section class="education">
+          <h3>Education</h3>
+          <div id="educationList"></div>
+        </section>
+
+        <!-- Skills Display -->
+        <section id="skills">
+          <h3>Skills</h3>
+          <ul id="skills-list"></ul>
+        </section>
+
+        <!-- Work Experience Display -->
+        <section class="experience">
+          <h3>Work Experience</h3>
+          <div id="experienceList"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
+

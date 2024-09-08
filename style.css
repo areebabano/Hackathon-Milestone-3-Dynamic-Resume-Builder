@@ -1,0 +1,148 @@
+/* style.css */
+
+/* General Styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Section */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form section {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form input[type="file"] {
+    border: none;
+}
+
+/* Buttons */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Resume Output Section */
+#resumeOutput {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#resumeOutput h1 {
+    text-align: center;
+}
+
+header img#resumePhoto {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header .header-text {
+    text-align: center;
+}
+
+header .header-text h2 {
+    margin: 10px 0 5px;
+}
+
+header .header-text p {
+    margin: 5px 0;
+}
+
+header a {
+    display: inline-block;
+    background-color: darkgoldenrod;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+header a:hover {
+    background-color: blue;
+    color: white;
+}
+
+/* Education, Skills, and Experience Sections */
+section.education, section.experience {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+#skills-list, #experienceList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills-list li, #experienceList div {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Hide Resume Output Section Initially */
+.hidden {
+    display: none;
+}
